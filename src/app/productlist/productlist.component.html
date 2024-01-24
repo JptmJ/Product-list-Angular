@@ -1,0 +1,25 @@
+<ul class="product-list">
+    <li *ngFor="let product of products" class="product-card">
+        <div class="product-image">
+            <img [src]="product.thumbnail" [alt]="product.name">
+        </div>
+        <div class="product-details">
+            <h3 class="product-name">{{ product.title }}</h3>
+            <p class="product-description">{{ product.description }}</p>
+            <div class="divider"></div>
+            <div class="price-section">
+                <p class="product-price">$ {{ product.price }}</p>
+                <p class="discount">-{{ product.discountPercentage }}%</p>
+            </div>
+            <div class="divider"></div>
+            <div class="rating-section">
+                <p class="product-rating">Rating: {{ product.rating }}</p>
+                <p class="product-stock">In Stock: {{ product.stock }}</p>
+            </div>
+            <div class="divider"></div>
+            <p class="brand">Brand: {{ product.brand }}</p>
+            <div class="divider"></div>
+            <p class="category">Category: {{ product.category }}</p>
+        </div>
+    </li>
+</ul>
